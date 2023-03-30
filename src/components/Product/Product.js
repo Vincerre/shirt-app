@@ -19,7 +19,7 @@ const Product = (props) => {
 
   const summary = {
     name: props.title,
-    price: currentPrice,
+    price: totalPrice,
     size: currentSize,
     color: currentColor,
   };
