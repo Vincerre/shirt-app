@@ -7,7 +7,13 @@ import { PropTypes } from "prop-types";
 const ProductForm = (props) => {
   return (
     <form>
-      <OptionSize currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} sizes={props.sizes} />
+      <OptionSize
+        currentSize={props.currentSize}
+        setCurrentSize={props.setCurrentSize}
+        sizes={props.sizes}
+        currentPrice={props.currentPrice}
+        setCurrentPrice={props.setCurrentPrice}
+      />
       <OptionColor setCurrentColor={props.setCurrentColor} currentColor={props.currentColor} colors={props.colors} />
       <Button className={styles.button}>
         <span className="fa fa-shopping-cart" />

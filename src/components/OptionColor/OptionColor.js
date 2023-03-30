@@ -12,7 +12,7 @@ const OptionColor = (props) => {
       <h3 className={styles.optionLabel}>Colors</h3>
       <ul className={styles.choices}>
         {props.colors.map((color) => (
-          <li key={color}>
+          <li key={color.name}>
             <button
               onClick={() => {
                 props.setCurrentColor(color);

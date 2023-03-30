@@ -8,10 +8,11 @@ const OptionSize = (props) => {
       <h3 className={styles.optionLabel}>Sizes</h3>
       <ul className={styles.choices}>
         {props.sizes.map((size) => (
-          <li key={size}>
+          <li key={size.id}>
             <button
               onClick={() => {
                 props.setCurrentSize(size.name);
+                props.setCurrentPrice(size.additionalPrice);
               }}
               type="button"
               className={clsx(size.name === props.currentSize && styles.active)}>
