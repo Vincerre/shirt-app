@@ -8,7 +8,7 @@ const OptionSize = (props) => {
       <h3 className={styles.optionLabel}>Sizes</h3>
       <ul className={styles.choices}>
         {props.sizes.map((size) => (
-          <li key={sizegit add }>
+          <li key={size}>
             <button
               onClick={() => {
                 props.setCurrentSize(size.name);
