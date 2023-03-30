@@ -17,6 +17,18 @@ const Product = (props) => {
     return newPrice(props.basePrice, currentPrice);
   }, [props.basePrice, currentPrice]);
 
+  const summary = {
+    name: props.title,
+    price: currentPrice,
+    size: currentSize,
+    color: currentColor,
+  };
+
+  const cartSummary = (e) => {
+    e.preventDefault();
+    console.log("Summary:", summary);
+  };
+
   return (
     <article className={styles.product}>
       <ProductImage name={props.name} currentColor={currentColor} />
@@ -34,6 +46,7 @@ const Product = (props) => {
           setCurrentColor={setCurrentColor}
           currentPrice={currentPrice}
           setCurrentPrice={setCurrentPrice}
+          onClick={cartSummary}
         />
       </div>
     </article>

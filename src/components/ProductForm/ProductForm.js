@@ -15,7 +15,7 @@ const ProductForm = (props) => {
         setCurrentPrice={props.setCurrentPrice}
       />
       <OptionColor setCurrentColor={props.setCurrentColor} currentColor={props.currentColor} colors={props.colors} />
-      <Button className={styles.button}>
+      <Button className={styles.button} onClick={props.onClick}>
         <span className="fa fa-shopping-cart" />
       </Button>
     </form>
