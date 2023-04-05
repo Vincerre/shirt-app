@@ -9,12 +9,8 @@ const Product = (props) => {
   const [currentSize, setCurrentSize] = useState(props.sizes[0].name);
   const [currentPrice, setCurrentPrice] = useState(props.sizes[0].additionalPrice);
 
-  const newPrice = (a, b) => {
-    return a + b;
-  };
-
   const totalPrice = useMemo(() => {
-    return newPrice(props.basePrice, currentPrice);
+    return props.basePrice + currentPrice;
   }, [props.basePrice, currentPrice]);
 
   const summary = {
